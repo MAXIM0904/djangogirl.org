@@ -6,13 +6,12 @@
 </head>
 <body>
     <div>
-        <h1>
-            <a href="/">Блог</a>
-        </h1>
+            {% for post in posts %}
+                <p>Время публикации: {{post.published_date}}</p>
+                <h1><a href="/">{{post.title}}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+                <br>
+            {% endfor %}
     </div>
-    <div>
-        <p>Время публикации</p>
-    </div>
-    <p>Привет, Роман Валерьевич!</p>
 </body>
 </html>
